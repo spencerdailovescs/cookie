@@ -28,7 +28,115 @@
 		
 		
 		<h1>Items</h1>
-		
+		<form>
+	Chocoholic:
+  	<input type="text" id="Chocoholic" value="0">
+  	<br>
+  	Morning Glory:
+  	<input type="text" id="MorningGlory" value="0">
+  	<br>
+  	Birthday Cake:
+  	<input type="text" id="BirthdayCake" value="0">
+  	<br>
+  	Pumpkin Patch:
+  	<input type="text" id="PumpkinPatch" value="0">
+  	<br>
+  	PB&J:
+  	<input type="text" id="PeanutButter" value="0">
+  	<br>
+  	Mint Oreo Cheesecake:
+  	<input type="text" id="MintOreo" value="0">
+  	<br>
+  	Coco-Nut:
+  	<input type="text" id="Coconut" value="0">
+  	<br>
+  	Bunny Food:
+  	<input type="text" id="BunnyFood" value="0">
+  	<br><br>
+  	<input type="button" onclick="price()" value="Checkout">
+</form>
+
+<p id="receipt"></p>
+
+<script>
+
+var prices = {Chocoholic: 3.25, MorningGlory: 2, BirthdayCake: 1.50, PumpkinPatch: 3.25, PeanutButter: 1.50, MintOreo: 2, Coconut: 3, BunnyFood: 3};
+var quantities = {Chocoholic: 0, MorningGlory: 0, BirthdayCake: 0, PumpkinPatch: 0, PeanutButter: 0, MintOreo: 0, Coconut: 0, BunnyFood: 0};
+var names = {Chocoholic: "Chocoholic", MorningGlory: "Morning Glory", BirthdayCake: "Birthday Cake", PumpkinPatch: "Pumpkin Patch", PeanutButter: "PB&J", MintOreo: "Mint Oreo Cheesecake", Coconut: "Coco-Nut", BunnyFood: "Bunny Food"};
+
+function price(){
+	var total = 0;
+
+	//calculating total
+	for (var key in quantities){
+		var number = document.getElementById(key).value;
+		quantities[key] = number;
+	}
+	
+	//items
+	var ChocoholicPrice = prices['Chocoholic'] * quantities['Chocoholic'];
+	var MorningGloryPrice = prices['MorningGlory'] * quantities['MorningGlory'];
+	var BirthdayCakePrice = prices['BirthdayCake'] * quantities['BirthdayCake'];
+	var PumpkinPatchPrice = prices['PumpkinPatch'] * quantities['PumpkinPatch'];
+	var PeanutButterPrice = prices['PeanutButter'] * quantities['PeanutButter'];
+	var MintOreoPrice = prices['MintOreo'] * quantities['MintOreo'];
+	var CoconutPrice = prices['Coconut'] * quantities['Coconut'];
+	var BunnyFoodPrice = prices['BunnyFood'] * quantities['BunnyFood'];
+	var totalbeforePrice = ChocoholicPrice + MorningGloryPrice + BirthdayCakePrice + PumpkinPatchPrice + PeanutButterPrice + MintOreoPrice + CoconutPrice + BunnyFoodPrice;
+
+	//tax
+	var tax = totalbeforePrice * .0625;
+	total = totalbeforePrice + tax;
+
+	//decimals
+	ChocoholicPrice = ChocoholicPrice.toFixed(2);
+	MorningGloryPrice = MorningGloryPrice.toFixed(2);
+	BirthdayCakePrice = BirthdayCakePrice.toFixed(2);
+	PumpkinPatchPrice = PumpkinPatchPrice.toFixed(2);
+	PeanutButterPrice = PeanutButterPrice.toFixed(2);
+	MintOreoPrice = MintOreoPrice.toFixed(2);
+	CoconutPrice = CoconutPrice.toFixed(2);
+	BunnyFoodPrice = BunnyFoodPrice.toFixed(2);
+
+	var totals = {Chocoholic: ChocoholicPrice, MorningGlory: MorningGloryPrice, BirthdayCake: BirthdayCakePrice, PumpkinPatch: PumpkinPatchPrice, PeanutButter: PeanutButterPrice, MintOreo: MintOreoPrice, Coconut: CoconutPrice, BunnyFood: BunnyFoodPrice};
+
+	tax = tax.toFixed(2);
+	totalbeforePrice = totalbeforePrice.toFixed(2);
+	total = total.toFixed(2);
+	
+	//for output
+	var output = "Receipt:" + "<br>";
+
+	var counter = 0;
+	for (var key in quantities){
+		if (quantities[key] > 0){
+			output += quantities[key] + " " + names[key] + ": $" + totals[key] + "<br>";
+			counter++;
+		}
+	}
+
+	if (counter == 0){
+		output = "Maybe consider ordering something?"
+	}
+	else{
+		output += "Tax: $" + tax + "<br>";
+		output += "Total: $" + total + "<br>";
+	}
+
+
+	if (confirm("Place Order?")) {
+		output = output;
+	} 
+	else {
+		output = "Order Cancelled!";
+	}
+
+	document.getElementById("receipt").innerHTML = output;
+
+}
+
+
+</script>
 	
 		<footer>
     		
