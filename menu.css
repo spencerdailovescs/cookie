@@ -40,3 +40,8 @@ font-family: 'Helvetica', 'Arial';
 .row h2 {
 color: #722626;
 }
+
+.column img {
+height: 200px;
+width: 200px;
+}
