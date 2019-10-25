@@ -12,7 +12,7 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
-input[type=submit] {
+input[type=button] {
   background-color: #722626;
   color: white;
   padding: 12px 20px;
@@ -20,7 +20,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=button]:hover {
   background-color: rgba(114, 38, 38, 0.7);
 }
 
@@ -49,7 +49,7 @@ input[type=submit]:hover {
 
 
 @media screen and (max-width: 600px) {
-  .column, input[type=submit] {
+  .column, input[type=button] {
     width: 100%;
     margin-top: 0;
   }
