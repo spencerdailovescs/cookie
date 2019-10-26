@@ -3,14 +3,15 @@
 	<head>
 		<!-- link to main stylesheet -->
 	<link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="customcook.css">
+
 	<title>Cookies^2 Staff</title>
+	<script type="text/javascript" src="customcookie.js"></script>
+
 	</head>
 	
-    <body>
-	<header>
-	<!-- link to main stylesheet -->
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<title>Cookies^2 Staff</title>
+    
+	<!-- <header>
 		<nav>
     		<ul>
         		<li><a href="index.html">Home</a></li>
@@ -22,9 +23,97 @@
         		<li><a href="checkout.html">Checkout</a></li>
     		</ul>
 		</nav>
-	</header>
-	    <p> We're currently under construction! Check back soon to find a surprise!! </p>
-    </body>
+	</header> -->
+	<div class="header">   		
+        		<div><a href="index.html">Home</a></div>
+	        	<div><a href="customcookie.html">Custom Cookie</a></div>
+        		<div><a href="menu.html">Menu</a></div>
+            	<div><a href="contact.html">Contact Us</a></div>
+	        	<div><a href="staff.html">Current Staff</a></div>
+				<div><a href="cart.html">Cart</a></div>
+    		
+		</div>
+	<body>
+	<div class="container">
+    <div style="text-align:center">
+    <h2>Make your own cookie!</h2>
+    <h3>You've seen what we have to offer, why not try making your own cooky cookie?</h3>
+    </div>
+    <div class="container">
+    	<!-- <div class="selections"> -->
+    		<div id="row" class="row">
+    		<div id="col" class="column">
+    		<div class="">
+    		
+    		<form>
 
+            <label for="dough">Step 1: Pick your Dough.</label>
+            <select type="text" id="dough">
+            	<option value='' disabled selected> Dough </option>
+            	<option value='0'> Sugar </option>
+	    		<option value='1'> Chocolate </option>
+	    		<option value='2'> Oatmeal </option>
+	    		<option value='3'> Snickerdoodle </option>
+	    		<option value='4'> Peanut Butter </option>
+            </select>
+        
+
+            <label for="fillIn">Step 2: Fill your cookie with delicious sweet / savory bites. </label>
+            <select type="text" id="fillIn">
+            	<option value='' disabled selected> Fill-ins</option>
+            	<option value='0'> Chocolate Chips</option>
+	    		<option value='1'> Rainbow Sprinkles </option>
+	    		<option value='2'> Craisins </option>
+	    		<option value='3'> Walnuts </option>
+	    		<option value='4'> Peanut Butter Chips </option>
+	    		<option value='5'> Coconut Flakes </option>
+	    		<option value='6'> Oreo </option>
+	    		<option value='7'> Nothing </option>
+
+             </select>
+     
+
+            <label for="topping">Step 3: Perfect your creation with our eccentric selection of toppings! </label>
+            <select type="text" id="topping"> 
+            	<option value='' disabled selected> Topping</option>
+            	<option value='0'> Vanilla Frosting</option>
+	    		<option value='1'> Chocolate Frosting</option>
+	    		<option value='2'> Maple Syrup </option>
+	    		<option value='3'> Cream Cheese </option>
+	    		<option value='4'> Chili Oil </option>
+	    		<option value='5'> Nacho Cheese </option>
+	    		<option value='6'> Nothing </option>
+            </select>
+   
+
+
+            <input type="button" value="Submit" onclick="parseForm()">
+            </form>
+        </div>
+
+        </div>
+        <div class="column"> Congrats! You've made a </div>
+
+    </div>
+    	<!-- </div> -->
+
+
+    	<!-- <div class="row">
+         <div class="column">
+            <form action="/action_page.php">
+            <label for="fname">Step 1: Pick your Dough!</label>
+            <select type="text" id="fname" name="firstname" placeholder="Your name.."></select>
+            <label for="lname">Step 2: Fill your cookie with delicious sweet / savory bites </label>
+            <select type="text" id="lname" name="lastname" placeholder="Your last name.."> </select>
+            <label for="email">Step 3: Top your creation with our eccentric selection of toppings </label>
+            <select type="text" id="email" name="address" placeholder="Your email address..">
+            </select>
+            <input type="button" value="Submit" onclick="alert('Thank you for your purchase!')">
+            </form>
+            </div>
+        </div> -->
+    </div>
+    </body>
+<script type="text/javascript" src="customcookie.js"></script>
 
 </html>
