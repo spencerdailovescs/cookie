@@ -84,33 +84,34 @@
 
     <script>
 
-    $(window).load(function(){ 
-        
-        var rotate = {
-            start: function(){
-                var picturenum = $('.switch').length;
-                 var current = 0;
-        $'.switch'.eq(current).fadeIn(500);
-
-        var infiniteLoop = setInterval(function(){
-                $('.switch').eq(current).fadeOut(500);
+   $(window).load(function() {
  
-                if(current == picturenum -1){
-                    current = 0;
+    var rotate =
+    {
+        init: function()
+        {
+            
+            var num= $('.switch').length;
+            var curr = 0;
+            $('.switch').eq(curr).fadeIn(500);
+ 
+            var loop = setInterval(function(){
+                $('.switch').eq(curr).fadeOut(500);
+ 
+                if(curr == num -1){
+                    curr = 0;
                 }else{
-                    current++;
+                    curr++;
                 }
-                $('.switch').eq(current).fadeIn(500);
+                $('.switch').eq(curr).fadeIn(500);
  
             }, 2000);
         }
-
     };
-	     rotate.start();
-    });
-
-   
-
+ 
+    rotate.init();
+ 
+});
     </script>
 
     </body>
