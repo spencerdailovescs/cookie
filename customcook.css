@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 12px;
+  margin-bottom: 32px;
+  resize: vertical;
+}
+
+input[type=button] {
+  background-color: #722626;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: rgba(114, 38, 38, 0.7);
+}
+
+.selections {
+  
+
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	max-width: 400px;
+}
+
+.container {
+  /*margin-top: 30%;*/
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  font-family: 'Helvetica', 'Arial';
+}
+
+.container h2 {
+  font-size: 28px;
+  color: #722626;
+}
+
+label {
+	font-size: 18px;
+	color: rgba(114, 38, 38, 0.7);
+}
+
+h3{
+	font-size: 24px;
+	color: rgba(114, 38, 38, 0.7);
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+  color: black;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column, input[type=button] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.header {
+	display: flex;
+	justify-content: space-evenly;
+	font-family: 'Helvetica', 'Arial';
+	color: #722626;
+	font-size: 2.5vw;
+	margin-bottom: 40px;
+}
