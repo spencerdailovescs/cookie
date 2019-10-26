@@ -24,7 +24,8 @@ input[type=button]:hover {
   background-color: rgba(114, 38, 38, 0.7);
   }
 
-.centered {
+.container h1 {
     font-family: 'Helvetica','Arial';
     color: #722626;
+    text-align: center;
     }
