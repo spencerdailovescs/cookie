@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="utf-8">
         <title>Checkout</title>
 	    
@@ -8,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
     </head>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <body>
 	<header>
 		<nav>
@@ -31,7 +34,16 @@
     </div>
         <div class="row">
         <div class="column">
-        <img src="https://st2.depositphotos.com/3227229/11727/i/950/depositphotos_117275034-stock-photo-chocolate-chip-cookies-isolated-on.jpg" style="width:100%">
+            <img class = "switch" src = "BirthdayCake.jpg">
+            <img class = "switch" src = "BunnyFood.jpg">
+            <img class = "switch" src = "Choco-Chili.jpg">
+            <img class = "switch" src = "Chocoholic.jpg">
+            <img class = "switch" src = "CocoNut.jpg">
+            <img class = "switch" src = "MorningGlory.jpg">
+            <img class = "switch" src = "NachoCheese.jpg">
+            <img class = "switch" src = "PB+J.jpg">
+            <img class = "switch" src = "PumpkinPatch.jpg">
+            <img class = "switch" src = "MintOreoCheesecake.jpg">
         </div>
             <div class="column">
             <form action="/action_page.php">
@@ -58,4 +70,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+    $(window).load(function(){ 
+        
+        var picturenum = $('.switch').length;
+        var current = 0;
+        $'.switch'.eq(current).fadeIn(1000);
+
+        var infiniteLoop = setInterval(function(){
+                $('.switch').eq(current).fadeOut(500);
+ 
+                if(current == picturenum -1){
+                    current = 0;
+                }else{
+                    current++;
+                }
+                $('.switch').eq(current).fadeIn(500);
+ 
+            }, 2000);
+    });
+
+
+    </script>
+
     </body>
