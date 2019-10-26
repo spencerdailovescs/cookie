@@ -1,6 +1,6 @@
 form {
 font-family: 'Helvetica','Arial';
-content-align: center;
+padding-left: 12px;
 }
 
 input[type=text], select, textarea {
