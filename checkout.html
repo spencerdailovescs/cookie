@@ -75,9 +75,11 @@
 
     $(window).load(function(){ 
         
-        var picturenum = $('.switch').length;
-        var current = 0;
-        $'.switch'.eq(current).fadeIn(1000);
+        var rotate = {
+            init: function(){
+                var picturenum = $('.switch').length;
+                 var current = 0;
+        $'.switch'.eq(current).fadeIn(500);
 
         var infiniteLoop = setInterval(function(){
                 $('.switch').eq(current).fadeOut(500);
@@ -90,8 +92,12 @@
                 $('.switch').eq(current).fadeIn(500);
  
             }, 2000);
+        }
+
+    };
     });
 
+    rotate.init();
 
     </script>
 
