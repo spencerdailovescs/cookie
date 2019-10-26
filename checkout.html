@@ -39,17 +39,7 @@
     <h2>Checkout</h2>
     </div>
         <div class="row">
-        <div class="column">
-            <img class = "switch" src = "BirthdayCake.jpg">
-            <img class = "switch" src = "BunnyFood.jpg">
-            <img class = "switch" src = "Choco-Chili.jpg">
-            <img class = "switch" src = "Chocoholic.jpg">
-            <img class = "switch" src = "CocoNut.jpg">
-            <img class = "switch" src = "MorningGlory.jpg">
-            <img class = "switch" src = "NachoCheese.jpg">
-            <img class = "switch" src = "PB+J.jpg">
-            <img class = "switch" src = "PumpkinPatch.jpg">
-            <img class = "switch" src = "MintOreoCheesecake.jpg">
+        <div class="column" id = "picture">
         </div>
             <div class="column">
             <form action="/action_page.php">
@@ -78,35 +68,31 @@
     </div>
 
     <script>
+	    
+   var pictures = ["BirthdayCake.jpg",
+		   "BunnyFood.jpg",
+		   "Choco-Chili.jpg",
+		   "Chocoholic.jpg",
+		  "CocoNut.jpg", 
+		   "MorningGlory.jpg", 
+		   "NachoCheese.jpg", 
+		   "PB+J.jpg", 
+		   "PumpkinPatch.jpg", 
+		   "MintOreoCheesecake.jpg"];
 
-   $(window).load(function() {
- 
-    var rotate =
-    {
-        init: function()
-        {
-            
-            var num= $('.switch').length;
-            var curr = 0;
-            $('.switch').eq(curr).fadeIn(500);
- 
-            var loop = setInterval(function(){
-                $('.switch').eq(curr).fadeOut(500);
- 
-                if(curr == num -1){
-                    curr = 0;
-                }else{
-                    curr++;
-                }
-                $('.switch').eq(curr).fadeIn(500);
- 
-            }, 2000);
-        }
+    function rotate(){
+        var curr = 0;
+        var numpic = pictures.length;
+        setInterval(function(){
+            $("#picture").html("<img src =" + pictures[curr] + ">").fadeIn(500).delay(1500).fadeOut(500);
+            curr++;
+            if (curr == numpic){
+                curr = 0;
+            }
+        }, 2500);
     };
- 
-    rotate.init();
- 
-});
+
+    rotate();
     </script>
 
     </body>
