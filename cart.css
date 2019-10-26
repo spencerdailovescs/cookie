@@ -1,0 +1,24 @@
+form {
+font-family: 'Helvetica','Arial';
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=button] {
+  background-color: #722626;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: rgba(114, 38, 38, 0.7);
+  }
