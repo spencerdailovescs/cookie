@@ -32,16 +32,16 @@ function namer(d,f,t){
 
 
 	if (fill_bool && top_bool) {
-		return "No topping? No fillers? Are you sure? Well, we guess our dough is delicious! Enjoy your " + d + " Cookie!"
+		return "<h3> No topping? No fillers? Are you sure? Well, we guess our dough is delicious! Enjoy your " + d + " Cookie! </h3>"
 	}
 	else if (!fill_bool && !top_bool ) {
-		return "Yay! You've made a " + f + " " + d + " Cookie with " + t + " on top. Sounds delicious!"
+		return "<h3>Yay! You've made a " + f + ", " + d + " Cookie with " + t + " on top. Sounds delicious!</h3>"
 	}
 	else if (fill_bool) {
-		return "Yay! You've made a " + d + " Cookie with " + t + " on top. Sounds delicious!"
+		return "<h3>Yay! You've made a " + d + " Cookie with " + t + " on top. Sounds delicious!</h3>"
 	}
 	else if (top_bool) {
-		return "Yay! You've made a " + f + " " + d + " Cookie. Sounds delicious!"
+		return "<h3>Yay! You've made a " + f + ", " + d + " Cookie. Sounds delicious!</h3>"
 	}
 
 
