@@ -1,6 +1,6 @@
 var doughs = Array("Sugar", "Chocolate", "Oatmeal", "Snickerdoodle", "Peanut Butter");
-var fillIns = Array("Chocolate Chip", "Rainbow Sprinkle", "Craisin", "Walnut", "Peanut Butter Chip", "Coconut Flake", "Oreo", "Nothing");
-var toppings = Array("Vanilla Frosting", "Chocolate Frosting", "Maple Syrup", "Cream Cheese", "Chili Oil", "Nacho Cheese", "Nothing");
+var fillIns = Array("Nothing", "Chocolate Chip", "Rainbow Sprinkle", "Craisin", "Walnut", "Peanut Butter Chip", "Coconut Flake", "Oreo");
+var toppings = Array("Nothing","Vanilla Frosting", "Chocolate Frosting", "Maple Syrup", "Cream Cheese", "Chili Oil", "Nacho Cheese");
 
 
 
