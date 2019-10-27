@@ -28,4 +28,5 @@ input[type=button]:hover {
     font-family: 'Helvetica','Arial';
     color: #722626;
     text-align: center;
+    padding: 5px;
     }
