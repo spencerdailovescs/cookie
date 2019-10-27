@@ -35,6 +35,10 @@ input[type=button]:hover {
   color: #722626;
 }
 
+.container p {
+  color: #722626;
+}
+
 .column {
   float: left;
   width: 50%;
