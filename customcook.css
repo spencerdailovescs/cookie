@@ -46,14 +46,13 @@ input[type=button]:hover {
   color: #722626;
 }
 
-label {
+label,h3{
 	font-size: 18px;
 	color: rgba(114, 38, 38, 0.7);
 }
 
-h3{
-	font-size: 24px;
-	color: rgba(114, 38, 38, 0.7);
+h1{
+	color: rgba(114, 38, 38);
 }
 
 h5{
@@ -93,6 +92,7 @@ h5{
 	font-size: 2.5vw;
 	margin-bottom: 40px;
 }
+
 .hidden {
   display: none;
 }
