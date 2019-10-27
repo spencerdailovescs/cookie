@@ -10,7 +10,6 @@
     position: fixed;
 } */
 .main-header {
-	.header {
 	position: fixed;
 	display: flex;
 	justify-content: space-evenly;
