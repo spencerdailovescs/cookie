@@ -9,6 +9,10 @@
     border-bottom: 1px solid #d5d5d5;
     position: fixed;
 } */
+
+*{
+	box-sizing:border-box;
+}
 .main-header {
 	position: fixed;
 	display: flex;
