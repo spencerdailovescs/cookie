@@ -22,6 +22,19 @@ function reformat(dough, fill, topp) {
 	$("#row").toggleClass("row", true);
 	$("#col").toggleClass("column", true);
 	$("#selections").toggleClass("selections", false)
+	$("#random-cook").toggleClass("hidden", false)
+	$("#creation").html( namer(dough, fill, topp));
+}
+
+function Randomize() {
+	var d_ind =  Math.floor(Math.random() * Math.floor(doughs.length - 1));
+	var f_ind =  Math.floor(Math.random() * Math.floor(fillIns.length - 1));
+	var t_ind =  Math.floor(Math.random() * Math.floor(toppings.length - 1));
+
+
+	var dough = doughs[d_ind];
+	var fill = fillIns[f_ind];
+	var topp = toppings[t_ind];
 	$("#creation").html( namer(dough, fill, topp));
 }
 
