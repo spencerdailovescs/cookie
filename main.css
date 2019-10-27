@@ -65,16 +65,18 @@ a {
 a:hover {
     text-decoration: underline;
 }
-h1 {
+.paragraph h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial';
     position: relative;
     text-align: center;
 }
-p {
+.paragraph p {
     font-size: 1.5em;
     line-height: 1.4em;
+    font-family:'Helvetica', 'Arial';
     color: #333;
+    text-align: center;
 }
 
 /* for header */
