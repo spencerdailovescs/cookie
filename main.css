@@ -76,6 +76,8 @@ a:hover {
     line-height: 1.4em;
     font-family:'Helvetica', 'Arial';
     color: #333;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
 }
 
