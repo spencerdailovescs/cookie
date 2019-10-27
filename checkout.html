@@ -84,7 +84,7 @@
         var curr = 0;
         var numpic = pictures.length;
         setInterval(function(){
-            $("#picture").html("<img src =" + pictures[curr] + ">").fadeIn(500).fadeOut(500);
+            $("#picture").html("<img src =" + pictures[curr] + ">").fadeIn(500).delay(2000).fadeOut(500);
             curr++;
             if (curr == numpic){
                 curr = 0;
